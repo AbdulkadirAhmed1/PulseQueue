@@ -6,7 +6,7 @@ This project is intentionally designed to showcase backend systems thinking beyo
 
 ---
 
-## 📌 Project Purpose
+## Project Purpose
 
 PulseQueue exists to strengthen backend engineering signals for co-op and internship roles by demonstrating:
 
@@ -21,7 +21,7 @@ The backend *is* the product.
 
 ---
 
-## 🧠 High-Level Concept
+## High-Level Concept
 
 Traditional backends often process requests synchronously:
 
@@ -34,7 +34,7 @@ The API responds immediately while work is processed in the background by worker
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### Core Layers
 
@@ -61,7 +61,7 @@ The API responds immediately while work is processed in the background by worker
 
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-----|------------|
@@ -77,37 +77,7 @@ No frontend is included by design.
 
 ---
 
-## 📡 API Endpoints (Planned)
-
-### `POST /events`
-- Accepts event payload
-- Validates input
-- Pushes job into Redis
-- Returns event ID immediately
-
-### `GET /events/:id`
-- Returns processing status:
-  - `pending`
-  - `processing`
-  - `completed`
-  - `failed`
-- Includes result if available
-
-### `GET /metrics`
-- Total jobs received
-- Successful jobs
-- Failed jobs
-- Retry counts
-- Queue depth
-
-### `GET /health`
-- API health status
-- Redis connectivity
-- Worker heartbeat
-
----
-
-## 🔁 Worker System Behavior
+## Worker System Behavior
 
 - Runs as a separate Node.js process
 - Consumes jobs from Redis
@@ -117,7 +87,7 @@ No frontend is included by design.
 
 ---
 
-## 🛡️ Reliability & Fault Tolerance
+## Reliability & Fault Tolerance
 
 PulseQueue demonstrates:
 
@@ -126,32 +96,6 @@ PulseQueue demonstrates:
 - Clear failure states
 - Safe job reprocessing
 - Graceful degradation when workers or Redis fail
-
----
-
-## 📁 Project Structure
-
-pulsequeue/
-├── src/
-│ ├── api/
-│ │ ├── routes/
-│ │ ├── controllers/
-│ ├── queue/
-│ │ ├── producer.js
-│ │ ├── consumer.js
-│ ├── workers/
-│ ├── services/
-│ ├── models/
-│ ├── db/
-│ ├── utils/
-│ └── app.js
-├── tests/
-├── docker/
-├── Dockerfile
-├── docker-compose.yml
-├── README.md
-└── package.json 
-
 
 ---
 
@@ -203,7 +147,7 @@ pulsequeue/
 
 ---
 
-## ❌ Out of Scope (By Design)
+## Out of Scope (By Design)
 
 - No frontend UI
 - No authentication
