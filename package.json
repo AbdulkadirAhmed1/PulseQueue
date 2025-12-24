@@ -1,0 +1,27 @@
+{
+  "name": "pulsequeue",
+  "version": "1.0.0",
+  "description": "PulseQueue is an asynchronous backend service built with Node.js, Redis, and background workers to demonstrate queue-based processing, fault tolerance, and production-style backend architecture.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdulkadirAhmed1/PulseQueue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdulkadirAhmed1/PulseQueue/issues"
+  },
+  "homepage": "https://github.com/AbdulkadirAhmed1/PulseQueue#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
