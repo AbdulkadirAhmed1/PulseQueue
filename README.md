@@ -65,16 +65,15 @@ The API responds immediately while work is processed in the background by worker
 
 ---
 
-src/
-├── api/
-├── queue/
-├── workers/
-├── services/
-├── models/
-├── db/
-├── utils/
-├── app.js
-└── server.js  
+src/api/
+src/queue/
+src/workers/
+src/services/
+src/models/
+src/db/
+src/utils/
+src/app.js
+src/server.js  
 
 ---
 
