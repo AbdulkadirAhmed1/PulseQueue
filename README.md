@@ -61,6 +61,31 @@ The API responds immediately while work is processed in the background by worker
 
 ---
 
+## Folder Structure
+
+src/
+├── api/
+├── queue/
+├── workers/
+├── services/
+├── models/
+├── db/
+├── utils/
+├── app.js
+└── server.js
+
+- API        → handles HTTP requests
+- Queue      → handles Redis enqueue/dequeue
+- Workers    → handles background processing
+- Services   → shared business logic
+- Models     → database schemas
+- DB         → database connection
+- Utils      → helpers
+- App        → application logic 
+- Server     → process startup 
+
+---
+
 ## Tech Stack
 
 | Layer | Technology |
