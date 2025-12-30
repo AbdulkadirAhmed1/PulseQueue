@@ -64,15 +64,15 @@ The API responds immediately while work is processed in the background by worker
 ## Folder Structure
 
 src/
-├── api/
-├── queue/
-├── workers/
-├── services/
-├── models/
-├── db/
-├── utils/
-├── app.js
-└── server.js
+-  api/
+-  queue/
+-  workers/
+-  services/
+-  models/
+-  db/
+-  utils/
+-  app.js
+-  server.js
 
 - API        → handles HTTP requests
 - Queue      → handles Redis enqueue/dequeue
