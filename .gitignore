@@ -1,7 +1,8 @@
 # Node modules
 node_modules/
-ArchitectureDesign/
-BackendEndToEndFlow/
+ArchitectureDesign.jpg
+BackendEndToEndFlow.jpg
+FileStructure.jpg
 
 # Environment variables
 .env
