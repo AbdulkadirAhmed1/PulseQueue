@@ -111,55 +111,7 @@ PulseQueue demonstrates:
 - Safe job reprocessing
 - Graceful degradation when workers or Redis fail
 
----
-
-## 🗺️ Project Roadmap & Deadlines
-
-### Phase 0 — Setup & Architecture (Week 1)
-**Goal:** Lock direction and environment
-
-- GitHub repository setup
-- README completed
-- Node.js + Express skeleton
-- Redis connectivity test
-- Docker baseline
-
----
-
-### Phase 1 — Core Async Pipeline (Weeks 2–3)
-**Goal:** End-to-end async processing
-
-- `POST /events` endpoint
-- Redis queue producer
-- Worker consumer process
-- Background job execution
-- Job status persistence
-- `GET /events/:id`
-
----
-
-### Phase 2 — Reliability & Observability (Week 4)
-**Goal:** Production-style behavior
-
-- Retry logic
-- Failure handling
-- Metrics endpoint
-- Health checks
-- Worker heartbeat monitoring
-
----
-
-### Phase 3 — Testing & Deployment (Weeks 5–6)
-
-- Jest tests
-- Docker Compose setup
-- Cloud deployment
-- README polish
-- Resume bullet finalization
-
-**Target Completion:** Early March
-
----
+--- 
 
 ## Out of Scope (By Design)
 
