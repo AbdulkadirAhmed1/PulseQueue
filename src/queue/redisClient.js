@@ -19,13 +19,8 @@ redisClient.on('error', (err) => {
 });
 
 async function connectRedis() {
-  try {
-    if (!redisClient.isOpen) {
-      await redisClient.connect();
-    }
-  } catch (err) {
-    // Intentionally swallow error to keep API alive
-    console.warn('Redis connection skipped (will retry later)');
+  if (!redisClient.isOpen) {
+    await redisClient.connect();
   }
 }
 

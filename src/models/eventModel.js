@@ -1,5 +1,7 @@
 // src/models/eventModel.js
 
+const crypto = require('crypto');
+
 const JOB_STATUS = {
   QUEUED: 'queued',
   PROCESSING: 'processing',
