@@ -3,6 +3,7 @@ node_modules/
 ArchitectureDesign.jpg
 BackendEndToEndFlow.jpg
 FileStructure.jpg
+Logo.png 
 
 # Environment variables
 .env

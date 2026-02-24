@@ -12,6 +12,15 @@ services:
     volumes:
       - .:/app
     command: npm run dev
+ 
+  worker:
+    build: .
+    command: node src/workers/jobWorker.js
+    depends_on:
+      - redis
+      
+    environment:
+      - REDIS_URL=redis://redis:6379 
 
   redis:
     image: redis:7-alpine
