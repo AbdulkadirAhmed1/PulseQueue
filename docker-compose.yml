@@ -1,28 +1,50 @@
-version: "3.8"
+version: "3.9"
 
 services:
   api:
     build: .
+    container_name: pulsequeue-api
     ports:
       - "3000:3000"
     environment:
       - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/pulsequeue
     depends_on:
       - redis
+      - postgres
     volumes:
       - .:/app
     command: npm run dev
- 
+
   worker:
     build: .
-    command: node src/workers/jobWorker.js
+    container_name: pulsequeue-worker
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/pulsequeue
     depends_on:
       - redis
-      
-    environment:
-      - REDIS_URL=redis://redis:6379 
+      - postgres
+    command: node src/workers/jobWorker.js
 
   redis:
     image: redis:7-alpine
+    container_name: pulsequeue-redis
     ports:
       - "6379:6379"
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: pulsequeue-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pulsequeue
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
